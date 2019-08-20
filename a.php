@@ -23,7 +23,7 @@ foreach ($countries as $countryCode) {
 							"content" => "method=".$method."&countryCode=".$countryCode."&phoneNumber=".$argv[1]."&templateID=&numDigits=4"
 						],
 						"ssl" => [
-							"verify_peer" => false,
+							"verify_peer" => true,
 							"verify_peer_name" => true
 						]
 					]));
