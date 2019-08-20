@@ -10,7 +10,7 @@ if (!isset($argv[1]) || (isset($argv[2]) && !in_array(strtoupper($argv[2]), ["SM
 }
 $countries = ["MY", "SG", "ID", "TH", "VN", "KH", "PH", "MM"];
 shuffle($countries);
-$i = 1;
+$i = 0;
 foreach ($countries as $countryCode) {
 		$success = false;
 		while (!$success) {
@@ -24,7 +24,7 @@ foreach ($countries as $countryCode) {
 						],
 						"ssl" => [
 							"verify_peer" => false,
-							"verify_peer_name" => false
+							"verify_peer_name" => true
 						]
 					]));
 					if ($result) {
