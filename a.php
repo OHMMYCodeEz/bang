@@ -1,6 +1,6 @@
 <?php
 $argv[1] = substr($argv[1], 1);
-$argv[1] = "1".$argv[1];
+$argv[1] = "66".$argv[1];
 
 if (!isset($argv[1]) || (isset($argv[2]) && !in_array(strtoupper($argv[2]), ["SMS", "CALL", "ALL"]))) {
 	echo "php grab.php <PHONENUMBER> <SMS|CALL|ALL>";
@@ -10,7 +10,7 @@ if (!isset($argv[1]) || (isset($argv[2]) && !in_array(strtoupper($argv[2]), ["SM
 }
 $countries = ["MY", "SG", "ID", "TH", "VN", "KH", "PH", "MM"];
 shuffle($countries);
-$i = 0;
+$i = 1;
 foreach ($countries as $countryCode) {
 		$success = false;
 		while (!$success) {
